@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&family=Rubik:wght@400;600;800&display=swap');
+
+:root {
+  --orange: #F79256;
+  --blue: #537FE7;
+  --lightGreen: #22B397;
+  --green:#556134;
+  --yellow: #FFC61A;
+  --font: 'Nunito Sans', 'Rubik', sans-serif;
+}
+
+* {
+  /* border: solid 1px #000; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.App {
+  height: 100vh;
+}
+
+.round {
+  position: absolute;
+  z-index: -1;
+  border: none;
+  width: 60%;
+  height: 14rem;
+  border-bottom-right-radius: 100%;
+  background-color: var(--lightGreen);
+}
+.round2 {
+  border: none;
+  width: 60%;
+  height: 12rem;
+  border-top-left-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: var(--lightGreen);
+  bottom: 0px;
+  right: 0;
+}
+
+.userMid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 31%;
+  left: 0;
+  right: 0;
+}
+.logo {
+  width: 44vw;
+  transform: rotate(349deg);
+  max-width: 18rem;
+  min-width: 11rem;
+}
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email {
+  background: #FFFFFF;
+  border: 5px solid var(--orange);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 11px;
+  width: 63vw;
+  height: 5vh;
+  margin-top: 3rem;
+  max-width: 45ch;
+  min-width: 30ch;
+  margin-bottom: 1rem;
+}
+.go {
+  background: var(--orange);
+  border: 5px solid var(--orange);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 11px;
+  color: white;
+  max-width: max-content;
+  padding: 0.2em 1em;
+  font-weight: 700;
+}
+.last {
+  color: gray;
+  margin: 3.5rem 0;
+}
+.last > a {
+  text-decoration: none;
+  margin-left: .5rem;
+  color: var(--green);
+  font-weight: 700;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.fa-clock,
+.fa-chart-column {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.timeDisplay {
+  font-size: clamp(2rem, 30vw, 8rem);
+}
+.timeDisplay,
+.current {
+  color: white;
+}
+.current {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 700;
+}
+.fa-dumbbell {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: var(--green);
+}
+.setsDisplay {
+  color: var(--green);
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.fa-circle-play {
+  color: var(--lightGreen);
+}
+.fa-rotate-left {
+  color: #D85571;
+}
+.controlButtons {
+  font-size: clamp(4rem, 9vw, 7rem);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem;
+}
+.settings {
+  font-weight: 600;
+}
+span {
+  margin: 0 .25rem;
+}
+.workTime {
+  background: rgba(247, 183, 86, 0.29);
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.restTime {
+  background: rgba(83, 127, 231, 0.34);
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sets {
+  background: rgba(34, 179, 151, 0.15);
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.setNum {
+  border: none;
+  text-align: center;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  padding: 0.3rem 0.3rem;
+  width: 40px;
+}
+input[type=text] {
+  border: none;
+  width: 33px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.3rem 0;
+}
+
+.report {
+  background-image: url(../public/images/bubble.png);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  padding-bottom: 0.1rem;
+  
+}
+.totalTime,
+.chartitle {
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.frame {
+  border: 4px solid var(--lightGreen);
+  margin: .5rem 3rem;
+}
+.frame > p:first-of-type {
+  font-weight: 600;
+  text-align: start;
+  margin: 0 0.25rem;
+  color: var(--orange);
+  font-size: clamp(.25rem, 4.5vw, 1rem);
+}
+.frame > p:nth-child(2) {
+  color: var(--orange);
+  font-size: clamp(.5rem, 9vw, 3rem);
+  margin: 0;
+  font-weight: 700;
+}
+.frame > p:nth-child(3) {
+  margin: 0;
+  color: gray;
+  margin: 0 0.25rem;
+  text-align: end;
+  font-size: clamp(.1rem, 3vw, .8rem);
+}
+.chartitle {
+  margin-bottom: 0;
+}
+.note {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: gray;
+}
+canvas {
+ background-color: #ffffff91;
+ margin-bottom: 2rem;
+ padding: .5rem 1rem;
+
+}
+hr {
+  margin: 2rem;
+  border: 1px solid var(--lightGreen);
+}
+.calForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+  border: 4px solid var(--lightGreen);
+  padding: 2rem;
+  align-items: center;
+}
+.calForm > label {
+  margin: 1rem 0;
+}
+.calForm > label:first-of-type {
+  margin-top: 0;
+}
+.calForm > select {
+  width: clamp(23ch, 40%, 35ch);
+  box-sizing: border-box; 
+}
+.calForm >input,
+.calForm > select {
+  margin-bottom: 1rem;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  padding: .2rem .5rem;
+}
+.cal {
+  color: var(--orange);
+  font-weight: 700;
+}
+@media (min-width: 420px) {
+  body {
+      max-width: 420px;
+      max-height: auto;
+      margin: 0 auto;
+  }
+ 
+}
+
